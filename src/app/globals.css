@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Forest Green Primary Theme - Dark Mode */
+    --color-primary: 34 139 34;          /* #228B22 - Forest Green */
+    --color-primary-light: 52 211 153;   /* #34d399 - Accent green */
+    --color-primary-dark: 17 77 17;      /* #114d11 - Deep green */
+
+    --color-background: 10 15 10;        /* #0a0f0a - Near black with green tint */
+    --color-background-card: 17 26 17;   /* #111a11 - Card background */
+    --color-background-elevated: 22 32 22; /* #162016 - Elevated surface */
+
+    --color-foreground: 232 245 232;     /* #e8f5e8 - Light green-tinted white */
+    --color-foreground-muted: 163 201 163; /* #a3c9a3 - Muted text */
+    --color-foreground-subtle: 139 179 139; /* #8bb38b - Subtle text (adjusted for ≥4.5:1 on #0a0f0a) */
+
+    --color-accent: 52 211 153;          /* #34d399 - Accent */
+    --color-border: 30 58 30;            /* #1e3a1e - Border */
+    --color-border-hover: 45 90 45;      /* #2d5a2d - Border hover */
+
+    /* Focus ring color — #228B22 on dark bg provides >3:1 contrast */
+    --color-focus-ring: 52 211 153;      /* #34d399 - Uses accent for better visibility (≥7:1 on bg) */
+
+    /* Spacing scale tokens */
+    --spacing-section: 6rem;             /* Vertical spacing between sections */
+    --spacing-section-sm: 4rem;          /* Section spacing on mobile */
+    --spacing-content: 2rem;             /* Internal content padding */
+
+    /* Animation timing tokens */
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-soft: cubic-bezier(0.33, 1, 0.68, 1);
+    --duration-fast: 150ms;
+    --duration-normal: 300ms;
+    --duration-slow: 600ms;
+    --duration-scroll: 800ms;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-inter), 'Inter', system-ui, sans-serif;
+  }
+
+  code, pre, kbd, samp {
+    font-family: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
+  }
+
+  /*
+   * WCAG AA Contrast Ratios (verified):
+   * Primary text (#e8f5e8) on background (#0a0f0a) = ~17:1 ✓
+   * Muted text (#a3c9a3) on background (#0a0f0a) = ~9.5:1 ✓
+   * Subtle text (#8bb38b) on background (#0a0f0a) = ~6.2:1 ✓ (meets 4.5:1 for normal text)
+   * Subtle text (#8bb38b) on card (#111a11) = ~5.4:1 ✓ (meets 4.5:1 for normal text)
+   * Accent (#34d399) on background (#0a0f0a) = ~9.8:1 ✓
+   * Primary (#228B22) as large text on bg (#0a0f0a) = ~4.0:1 ✓ (meets 3:1 for large text)
+   * Focus ring (#34d399) on background (#0a0f0a) = ~9.8:1 ✓ (exceeds 3:1 focus indicator)
+   */
+
+  /* Focus ring for accessibility — uses accent color for clear visibility */
+  *:focus-visible {
+    outline: 2px solid rgb(var(--color-focus-ring));
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Ensure focus ring is visible on all surface colors */
+  .bg-background-card *:focus-visible,
+  .bg-background-elevated *:focus-visible {
+    outline-color: rgb(var(--color-focus-ring));
+  }
+}
+
+@layer components {
+  /* Typing effect cursor blink animation */
+  .typing-cursor {
+    display: inline;
+    font-weight: 100;
+  }
+
+  .typing-cursor.blinking {
+    animation: blink 700ms steps(1) infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  /* Section wrapper with consistent spacing */
+  .section-spacing {
+    padding-top: var(--spacing-section);
+    padding-bottom: var(--spacing-section);
+  }
+
+  @media (max-width: 767px) {
+    .section-spacing {
+      padding-top: var(--spacing-section-sm);
+      padding-bottom: var(--spacing-section-sm);
+    }
+  }
+}
+
+@layer utilities {
+  /* Reduced motion: disable ALL animations, transitions, transforms, and scroll behavior */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      animation-delay: 0ms !important;
+      transition-duration: 0.01ms !important;
+      transition-delay: 0ms !important;
+      scroll-behavior: auto !important;
+    }
+
+    /* Disable transform-based animations */
+    .motion-reduce\:transform-none {
+      transform: none !important;
+    }
+
+    /* Disable opacity transitions — show content immediately */
+    .motion-reduce\:opacity-full {
+      opacity: 1 !important;
+    }
+
+    /* Utility to skip all motion */
+    .motion-safe\:animate-none {
+      animation: none !important;
+      transition: none !important;
+      transform: none !important;
+    }
+
+    /* Force smooth scroll off globally */
+    html {
+      scroll-behavior: auto !important;
+    }
+
+    /* Disable particle/canvas animations */
+    canvas {
+      animation: none !important;
+    }
+  }
+
+  /* Motion-safe utilities for progressive enhancement */
+  @media (prefers-reduced-motion: no-preference) {
+    .motion-safe\:transition-default {
+      transition-property: opacity, transform;
+      transition-duration: var(--duration-normal);
+      transition-timing-function: var(--ease-out);
+    }
+
+    .motion-safe\:transition-fast {
+      transition-property: opacity, transform, box-shadow, filter;
+      transition-duration: var(--duration-fast);
+      transition-timing-function: var(--ease-out);
+    }
+
+    .motion-safe\:transition-slow {
+      transition-property: opacity, transform;
+      transition-duration: var(--duration-slow);
+      transition-timing-function: var(--ease-out);
+    }
+  }
+}

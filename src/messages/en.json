@@ -1,0 +1,247 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "certifications": "Certifications",
+    "projects": "Projects",
+    "stats": "Stats",
+    "telecom": "Telecom",
+    "github": "GitHub",
+    "blog": "Blog",
+    "contact": "Contact",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "menuLabel": "Mobile navigation menu",
+    "mobileNavigation": "Main navigation"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "hireCta": "Hire Me",
+    "downloadCv": "Download CV",
+    "titles": {
+      "systemsEngineer": "Systems Engineer",
+      "telecomSpecialist": "Telecom Specialist",
+      "backendDeveloper": "Backend Developer",
+      "automationAi": "Automation & AI"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "bio": "Systems Engineer with 6+ years of experience in the telecommunications sector, specialized in process automation, backend development, and project management. Currently at +Móvil (Liberty Latin America), Panama, leading digital transformation initiatives and operational optimization.",
+    "photoAlt": "Professional photo of Angelo Navarro, Systems Engineer and Telecom Specialist"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "present": "Present",
+    "cableWireless": {
+      "title": "Systems Analyst",
+      "description": "Management and support of mediation and billing platforms in telecommunications environment.",
+      "achievement1": "CSG mediation process automation",
+      "achievement2": "CDR processing flow optimization",
+      "achievement3": "Implementation of Linux monitoring scripts"
+    },
+    "especialistaSistemas": {
+      "title": "Systems Specialist I",
+      "description": "Development of automation solutions for telecommunications platforms.",
+      "achievement1": "CDR validation tools development",
+      "achievement2": "API integration for network management",
+      "achievement3": "Implementation of automated data pipelines"
+    },
+    "masMovil": {
+      "title": "Senior Systems Specialist",
+      "description": "Current role at +Móvil (Liberty Latin America), leading automation, backend development, and project management in the telecommunications area.",
+      "achievement1": "Digital transformation initiatives leadership",
+      "achievement2": "Telecom data analytics platform development",
+      "achievement3": "Project management with CAPM/PMI methodology",
+      "achievement4": "Architecture of bulk processing solutions"
+    },
+    "libertySpecialist1": {
+      "title": "Systems Specialist I",
+      "description": "Development of automation solutions for telecommunications platforms.",
+      "achievement1": "CDR validation tools development",
+      "achievement2": "API integration for network management",
+      "achievement3": "Implementation of automated data pipelines"
+    },
+    "libertySpecialist2": {
+      "title": "Systems Specialist II",
+      "description": "Technical leadership in automation projects and telco infrastructure modernization.",
+      "achievement1": "End-to-end automation project leadership",
+      "achievement2": "Architecture of bulk processing solutions",
+      "achievement3": "Junior technical team mentoring"
+    },
+    "currentRole": {
+      "title": "Senior Systems Specialist",
+      "description": "Current role at +Móvil (Liberty Latin America), leading automation, backend development, and project management in the telecommunications area.",
+      "achievement1": "Digital transformation initiatives leadership",
+      "achievement2": "Telecom data analytics platform development",
+      "achievement3": "Project management with CAPM/PMI methodology"
+    }
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "categories": {
+      "backend": "Backend",
+      "telecom": "Telecommunications",
+      "devops": "DevOps",
+      "projectManagement": "Project Management",
+      "database": "Databases",
+      "databases": "Databases",
+      "scripting": "Scripting & Automation"
+    },
+    "python": "Python",
+    "nodejs": "Node.js",
+    "typescript": "TypeScript",
+    "mysql": "MySQL",
+    "postgresql": "PostgreSQL",
+    "docker": "Docker",
+    "linux": "Linux",
+    "git": "Git",
+    "bash": "Bash",
+    "csg": "CSG Mediation",
+    "ims": "IMS",
+    "cdr": "CDR Processing",
+    "sms": "SMS Gateway",
+    "billing": "Billing Systems",
+    "mavenair": "Mavenair",
+    "capm": "CAPM",
+    "scrum": "Scrum",
+    "agile": "Agile",
+    "mediation": "Mediation",
+    "levels": {
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "expert": "Expert"
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "smartChange": {
+      "title": "Smart Change Analyzer",
+      "description": "Intelligent code change analysis tool using NLP and Git processing to detect patterns and anomalies in commits."
+    },
+    "imsDecoder": {
+      "title": "IMS Decoder",
+      "description": "IMS protocol decoder and analyzer for network diagnostics in telecommunications environments."
+    },
+    "cdrValidation": {
+      "title": "CDR Validation Tool",
+      "description": "CDR (Call Detail Records) validation and analysis tool ensuring billing data integrity."
+    },
+    "jpdve": {
+      "title": "J-PDVE",
+      "description": "Community organizational management platform with enterprise architecture, reporting, and analytical dashboards."
+    },
+    "portfolio": {
+      "title": "Portfolio EVERGREEN",
+      "description": "Professional portfolio with premium dark-mode design, advanced animations, bilingual support, and Vercel deployment."
+    },
+    "viewGithub": "View on GitHub",
+    "viewDemo": "View Demo"
+  },
+  "stats": {
+    "title": "Stats",
+    "yearsExperience": "Years of Experience",
+    "scripts": "Scripts Developed",
+    "automations": "Automations",
+    "projects": "Projects Completed",
+    "mainTechnologies": "Main Technologies"
+  },
+  "telecom": {
+    "title": "Telecommunications",
+    "subtitle": "Specialized experience in the telco sector",
+    "csgMediation": "CSG Mediation",
+    "cdrProcessing": "CDR Processing",
+    "imsCore": "IMS Core",
+    "smsGateway": "SMS Gateway",
+    "billingSystems": "Billing Systems",
+    "mediation": "Mediation Platforms",
+    "mavenair": "Mavenair"
+  },
+  "blog": {
+    "title": "Technical Blog",
+    "noArticles": "No articles available",
+    "readMore": "Read more",
+    "categories": {
+      "ims": "IMS",
+      "cdr": "CDR",
+      "pythonAutomation": "Python Automation",
+      "capmPmi": "CAPM/PMI",
+      "telecom": "Telecom"
+    },
+    "allCategories": "All",
+    "languageIndicator": "Language"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind? Let's talk!",
+    "socialTitle": "Connect with me",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "success": "Message sent successfully! I'll get back to you soon.",
+    "errors": {
+      "nameMin": "Name must be at least 2 characters",
+      "nameMax": "Name cannot exceed 100 characters",
+      "emailInvalid": "Invalid email format",
+      "emailMax": "Email cannot exceed 254 characters",
+      "subjectMin": "Subject must be at least 3 characters",
+      "subjectMax": "Subject cannot exceed 150 characters",
+      "messageMin": "Message must be at least 10 characters",
+      "messageMax": "Message cannot exceed 1000 characters",
+      "submitFailed": "Failed to send message. Please try again."
+    }
+  },
+  "errors": {
+    "cvNotAvailable": "CV not available at this time",
+    "generic": "An unexpected error occurred. Please try again."
+  },
+  "github": {
+    "title": "GitHub Activity",
+    "contributions": "Contributions",
+    "pinnedRepos": "Pinned Repositories",
+    "totalCommits": "Total Commits (12 months)",
+    "topLanguages": "Top Languages",
+    "staleData": "Data may not be up to date",
+    "partialFailure": "Some data could not be loaded",
+    "stars": "stars",
+    "noContributions": "No contribution data available",
+    "noRepos": "No repositories available",
+    "lessActivity": "Less",
+    "moreActivity": "More"
+  },
+  "commandPalette": {
+    "label": "Command palette",
+    "placeholder": "Search sections, projects, articles...",
+    "searchLabel": "Search portfolio",
+    "noResults": "No results found",
+    "hint": "Type to search...",
+    "resultsLabel": "Search results",
+    "typeSection": "Section",
+    "typeProject": "Project",
+    "typeArticle": "Article",
+    "navigate": "navigate",
+    "select": "select",
+    "close": "close"
+  },
+  "certifications": {
+    "title": "Certifications",
+    "capm": "CAPM - Certified Associate in Project Management",
+    "pmi": "PMI",
+    "nodejsCert": "Node.js Application Developer",
+    "nodejsOrg": "OpenJS Foundation",
+    "pythonCert": "Python Professional Certificate",
+    "pythonOrg": "Python Institute",
+    "scrumCert": "Scrum Foundation Professional",
+    "scrumOrg": "CertiProf",
+    "linuxCert": "Linux Essentials",
+    "linuxOrg": "Linux Professional Institute",
+    "dockerCert": "Docker Essentials",
+    "dockerOrg": "Docker Inc."
+  }
+}
