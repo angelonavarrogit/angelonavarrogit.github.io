@@ -20,6 +20,14 @@
     "greeting": "Hi, I'm",
     "hireCta": "Hire Me",
     "downloadCv": "Download CV",
+    "available": "Available for new projects",
+    "subtitle": "Systems Engineer with 6+ years transforming telecom operations through automation, robust APIs, and project management at +Móvil, Panama.",
+    "metrics": {
+      "years": "Years of experience",
+      "automations": "Automations",
+      "scripts": "Scripts in production",
+      "projects": "Projects delivered"
+    },
     "titles": {
       "systemsEngineer": "Systems Engineer",
       "telecomSpecialist": "Telecom Specialist",

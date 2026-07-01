@@ -20,6 +20,14 @@
     "greeting": "Hola, soy",
     "hireCta": "Contrátame",
     "downloadCv": "Descargar CV",
+    "available": "Disponible para nuevos proyectos",
+    "subtitle": "Ingeniero en Sistemas con +6 años transformando operaciones de telecomunicaciones mediante automatización, APIs robustas y gestión de proyectos en +Móvil, Panamá.",
+    "metrics": {
+      "years": "Años de experiencia",
+      "automations": "Automatizaciones",
+      "scripts": "Scripts en producción",
+      "projects": "Proyectos entregados"
+    },
     "titles": {
       "systemsEngineer": "Ingeniero en Sistemas",
       "telecomSpecialist": "Especialista en Telecomunicaciones",
