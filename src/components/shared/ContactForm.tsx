@@ -56,7 +56,7 @@ export default function ContactForm() {
       const body = encodeURIComponent(
         `Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`
       );
-      const mailtoUrl = `mailto:angelo.navarro.dev@gmail.com?subject=${subject}&body=${body}`;
+      const mailtoUrl = `mailto:navarro.angelo@outlook.com?subject=${subject}&body=${body}`;
       
       window.open(mailtoUrl, '_blank');
       setFormStatus('success');

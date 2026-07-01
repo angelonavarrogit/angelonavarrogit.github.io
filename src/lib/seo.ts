@@ -146,8 +146,8 @@ export function buildPersonJsonLd(): Record<string, unknown> {
     jobTitle: 'Systems Engineer & Telecom Specialist',
     url: SITE_URL,
     sameAs: [
-      'https://github.com/angelonavarro',
-      'https://linkedin.com/in/angelonavarro',
+      'https://github.com/angelonavarrogit',
+      'https://linkedin.com/in/navarro-angelo',
     ],
     worksFor: {
       '@type': 'Organization',

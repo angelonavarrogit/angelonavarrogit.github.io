@@ -115,7 +115,7 @@ export default function HeroSection() {
           {t('hero.downloadCv')}
         </button>
         <a
-          href="https://www.linkedin.com/in/angelonavarro"
+          href="https://www.linkedin.com/in/navarro-angelo"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-border bg-background/50 px-5 py-3 text-foreground transition-all duration-200 hover:border-[#0A66C2]/50 hover:text-[#0A66C2] focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"

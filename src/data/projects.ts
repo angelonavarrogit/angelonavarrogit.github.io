@@ -12,7 +12,7 @@ export const PROJECTS: Project[] = [
     descriptionKey: 'projects.smartChange.description',
     imageUrl: '/images/projects/smart-change.svg',
     techStack: ['Python', 'NLP', 'Git'],
-    githubUrl: 'https://github.com/angelonavarro/smart-change-analyzer',
+    githubUrl: 'https://github.com/angelonavarrogit/smart-change-analyzer',
   },
   {
     id: 'ims-decoder',
@@ -20,7 +20,7 @@ export const PROJECTS: Project[] = [
     descriptionKey: 'projects.imsDecoder.description',
     imageUrl: '/images/projects/ims-decoder.svg',
     techStack: ['Python', 'IMS', 'Telecom'],
-    githubUrl: 'https://github.com/angelonavarro/ims-decoder',
+    githubUrl: 'https://github.com/angelonavarrogit/ims-decoder',
   },
   {
     id: 'cdr-validation-tool',
@@ -28,7 +28,7 @@ export const PROJECTS: Project[] = [
     descriptionKey: 'projects.cdrValidation.description',
     imageUrl: '/images/projects/cdr-validation.svg',
     techStack: ['Python', 'MySQL', 'Automation'],
-    githubUrl: 'https://github.com/angelonavarro/cdr-validation-tool',
+    githubUrl: 'https://github.com/angelonavarrogit/cdr-validation-tool',
   },
   {
     id: 'j-pdve',
@@ -36,7 +36,7 @@ export const PROJECTS: Project[] = [
     descriptionKey: 'projects.jpdve.description',
     imageUrl: '/images/projects/j-pdve.svg',
     techStack: ['TypeScript', 'Next.js', 'NestJS'],
-    githubUrl: 'https://github.com/angelonavarro/j-pdve',
+    githubUrl: 'https://github.com/angelonavarrogit/j-pdve',
     demoUrl: 'https://jpdve.vercel.app',
   },
   {
@@ -45,7 +45,7 @@ export const PROJECTS: Project[] = [
     descriptionKey: 'projects.portfolio.description',
     imageUrl: '/images/projects/portfolio.svg',
     techStack: ['Next.js', 'TypeScript', 'TailwindCSS', 'Framer Motion'],
-    githubUrl: 'https://github.com/angelonavarro/portfolio',
+    githubUrl: 'https://github.com/angelonavarrogit/portfolio',
     demoUrl: 'https://angelonavarro.dev',
   },
 ];
