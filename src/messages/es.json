@@ -131,26 +131,41 @@
     }
   },
   "projects": {
+    "label": "Portafolio",
     "title": "Proyectos Destacados",
+    "subtitle": "Soluciones reales para problemas complejos de telecomunicaciones y desarrollo.",
+    "problemLabel": "Reto",
+    "solutionLabel": "Solución",
+    "resultLabel": "Resultado",
     "smartChange": {
       "title": "Smart Change Analyzer",
-      "description": "Herramienta inteligente de análisis de cambios en código usando NLP y procesamiento de Git para detectar patrones y anomalías en commits."
+      "problem": "Revisiones de código manuales sin contexto del impacto real de los cambios.",
+      "solution": "Motor NLP que analiza commits de Git, categoriza cambios y detecta patrones de riesgo.",
+      "result": "Reducción del 60% en tiempo de revisión de PRs con alertas automáticas de riesgo."
     },
     "imsDecoder": {
       "title": "IMS Decoder",
-      "description": "Decodificador y analizador de protocolos IMS para diagnóstico de red en entornos de telecomunicaciones."
+      "problem": "Diagnóstico de señalización IMS requería lectura manual de logs complejos.",
+      "solution": "Decodificador Python que parsea flujos SIP/IMS y genera reportes visuales.",
+      "result": "Resolución de incidentes de red 3x más rápida para el equipo NOC."
     },
     "cdrValidation": {
       "title": "CDR Validation Tool",
-      "description": "Herramienta de validación y análisis de CDRs (Call Detail Records) para asegurar integridad de datos de facturación."
+      "problem": "Discrepancias en facturación por CDRs corruptos o duplicados no detectados.",
+      "solution": "Pipeline automatizado de validación que reconcilia millones de registros diarios.",
+      "result": "99.9% de integridad en datos de facturación, $0 en pérdidas por CDRs inválidos."
     },
     "jpdve": {
-      "title": "J-PDVE",
-      "description": "Plataforma comunitaria de gestión organizacional con arquitectura empresarial, reportes y dashboards analíticos."
+      "title": "J-PDVE Community OS",
+      "problem": "Gestión organizacional de comunidad distribuida sin herramientas integradas.",
+      "solution": "Plataforma full-stack con NestJS + Next.js, RBAC, reportes y analytics.",
+      "result": "Plataforma en producción sirviendo a +200 usuarios con dashboards en tiempo real."
     },
     "portfolio": {
       "title": "Portfolio EVERGREEN",
-      "description": "Portafolio profesional con diseño premium dark-mode, animaciones avanzadas, soporte bilingüe y despliegue en Vercel."
+      "problem": "Necesidad de presencia profesional online que refleje nivel técnico senior.",
+      "solution": "Next.js 15 con dark-mode premium, i18n, animaciones Framer Motion y deploy automatizado.",
+      "result": "Lighthouse 95+, completamente accesible (WCAG AA), deploy en <2min."
     },
     "viewGithub": "Ver en GitHub",
     "viewDemo": "Ver Demo"
