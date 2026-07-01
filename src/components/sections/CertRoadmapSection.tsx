@@ -10,11 +10,17 @@ import { useTranslations } from 'next-intl';
  */
 
 const ROADMAP = [
-  { id: 'capm', status: 'completed' },
-  { id: 'pmp', status: 'next' },
-  { id: 'aws', status: 'planned' },
-  { id: 'azure', status: 'planned' },
-  { id: 'gcloud', status: 'future' },
+  { id: 'capm', status: 'completed', credlyId: '786bd1e2-3614-4d11-8a6c-41f0b6e8356a' },
+  { id: 'pmp', status: 'next', credlyId: null },
+  { id: 'aws', status: 'planned', credlyId: null },
+  { id: 'azure', status: 'planned', credlyId: null },
+  { id: 'gcloud', status: 'future', credlyId: null },
+];
+
+/** Second Credly badge (could be Scrum, Python, or another cert) */
+const CREDLY_BADGES = [
+  { id: '786bd1e2-3614-4d11-8a6c-41f0b6e8356a', label: 'CAPM' },
+  { id: 'ef7f2452-54cf-4340-aa9b-f038e1fabc2f', label: 'Professional Certificate' },
 ];
 
 const STATUS_STYLES: Record<string, { bg: string; text: string; icon: string }> = {
@@ -35,17 +41,65 @@ export default function CertRoadmapSection() {
   const fadeUp = { hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } } };
 
   const content = (
-    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-      {ROADMAP.map((cert) => {
-        const style = STATUS_STYLES[cert.status];
-        return (
-          <div key={cert.id} className={`flex flex-col items-center gap-2 rounded-xl border p-5 text-center ${style.bg}`}>
-            <span className={`text-lg font-bold ${style.text}`}>{style.icon}</span>
-            <span className="text-sm font-semibold text-foreground">{t(`${cert.id}.name`)}</span>
-            <span className={`text-xs font-medium uppercase tracking-wider ${style.text}`}>{t(`${cert.id}.status`)}</span>
-          </div>
-        );
-      })}
+    <div className="space-y-10">
+      {/* Roadmap grid */}
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+        {ROADMAP.map((cert) => {
+          const style = STATUS_STYLES[cert.status];
+          return (
+            <div key={cert.id} className={`flex flex-col items-center gap-2 rounded-xl border p-5 text-center ${style.bg}`}>
+              <span className={`text-lg font-bold ${style.text}`}>{style.icon}</span>
+              <span className="text-sm font-semibold text-foreground">{t(`${cert.id}.name`)}</span>
+              <span className={`text-xs font-medium uppercase tracking-wider ${style.text}`}>{t(`${cert.id}.status`)}</span>
+              {cert.credlyId && (
+                <a
+                  href={`https://www.credly.com/badges/${cert.credlyId}/public_url`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 inline-flex items-center gap-1 text-[10px] font-medium text-accent/70 hover:text-accent transition-colors"
+                >
+                  <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Verify
+                </a>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Verified Credly Badges */}
+      <div className="flex flex-col items-center gap-4">
+        <p className="text-xs font-medium uppercase tracking-widest text-foreground-subtle">
+          {t('verified')}
+        </p>
+        <div className="flex flex-wrap justify-center gap-4">
+          {CREDLY_BADGES.map((badge) => (
+            <a
+              key={badge.id}
+              href={`https://www.credly.com/badges/${badge.id}/public_url`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2.5 rounded-lg border border-border/50 bg-background-card/50 px-4 py-3 transition-all duration-200 hover:border-accent/30 hover:shadow-md hover:shadow-accent/5"
+              aria-label={`Verify ${badge.label} on Credly`}
+            >
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent/10">
+                <svg className="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-sm font-semibold text-foreground group-hover:text-accent transition-colors">{badge.label}</span>
+                <span className="text-[10px] text-foreground-subtle">Credly Verified</span>
+              </div>
+              <svg className="ml-2 h-3.5 w-3.5 text-foreground-subtle group-hover:text-accent transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          ))}
+        </div>
+      </div>
     </div>
   );
 

@@ -136,6 +136,7 @@
   "certRoadmap": {
     "label": "Visión",
     "title": "Ruta de Certificaciones",
+    "verified": "Credenciales Verificadas en Credly",
     "capm": { "name": "CAPM", "status": "Completado" },
     "pmp": { "name": "PMP", "status": "Siguiente" },
     "aws": { "name": "AWS", "status": "Planeado" },
