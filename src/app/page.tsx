@@ -6,6 +6,9 @@ import { getAllArticles } from '@/lib/blog';
 import HeroSection from '@/components/sections/HeroSection';
 import WhatIDoSection from '@/components/sections/WhatIDoSection';
 import IndustriesSection from '@/components/sections/IndustriesSection';
+import HighlightsSection from '@/components/sections/HighlightsSection';
+import PhilosophySection from '@/components/sections/PhilosophySection';
+import FeaturedTechSection from '@/components/sections/FeaturedTechSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ExperienceSection from '@/components/sections/ExperienceSection';
 import SkillsSection from '@/components/sections/SkillsSection';
@@ -37,8 +40,11 @@ export default function Home() {
       <HeroSection />
       <WhatIDoSection />
       <IndustriesSection />
+      <HighlightsSection />
       <AboutSection />
       <ExperienceSection />
+      <PhilosophySection />
+      <FeaturedTechSection />
       <SkillsSection />
       <CertificationsSection />
       <ProjectsSection />

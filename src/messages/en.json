@@ -80,6 +80,48 @@
     "automation": "Automation",
     "pm": "Project Management"
   },
+  "highlights": {
+    "label": "Impact",
+    "title": "Professional Highlights",
+    "years": "Years in Telecommunications",
+    "enterprise": "Enterprise Systems",
+    "cdr": "CDR Records Processed",
+    "capm": "CAPM Certified (PMI)",
+    "platforms": "Critical Production Platforms",
+    "mediation": "Data Mediation Specialist"
+  },
+  "philosophy": {
+    "label": "Values",
+    "title": "My Engineering Philosophy",
+    "automation": {
+      "title": "Automation First",
+      "description": "If a repetitive task exists, it should be automated. No exceptions."
+    },
+    "security": {
+      "title": "Security by Design",
+      "description": "Security is not an afterthought. It's part of the design from day one."
+    },
+    "documentation": {
+      "title": "Documentation Matters",
+      "description": "Good software deserves good documentation. Code is read more than it's written."
+    },
+    "learning": {
+      "title": "Continuous Learning",
+      "description": "Technology changes. Learning never stops."
+    },
+    "scalable": {
+      "title": "Scalable Thinking",
+      "description": "Always build with tomorrow in mind. Today's solutions must grow."
+    }
+  },
+  "featuredTech": {
+    "label": "Technologies",
+    "title": "Featured Technologies",
+    "enterprise": "Enterprise",
+    "programming": "Programming",
+    "infrastructure": "Infrastructure",
+    "ai": "AI & ML"
+  },
   "experience": {
     "label": "Career Path",
     "title": "Professional Experience",
