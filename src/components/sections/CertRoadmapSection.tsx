@@ -10,17 +10,17 @@ import { useTranslations } from 'next-intl';
  */
 
 const ROADMAP = [
-  { id: 'capm', status: 'completed', credlyId: '786bd1e2-3614-4d11-8a6c-41f0b6e8356a' },
+  { id: 'capm', status: 'completed', credlyId: 'ef7f2452-54cf-4340-aa9b-f038e1fabc2f' },
   { id: 'pmp', status: 'next', credlyId: null },
   { id: 'aws', status: 'planned', credlyId: null },
   { id: 'azure', status: 'planned', credlyId: null },
   { id: 'gcloud', status: 'future', credlyId: null },
 ];
 
-/** Second Credly badge (could be Scrum, Python, or another cert) */
+/** Credly verified badges */
 const CREDLY_BADGES = [
-  { id: '786bd1e2-3614-4d11-8a6c-41f0b6e8356a', label: 'CAPM' },
-  { id: 'ef7f2452-54cf-4340-aa9b-f038e1fabc2f', label: 'Professional Certificate' },
+  { id: 'ef7f2452-54cf-4340-aa9b-f038e1fabc2f', label: 'CAPM (PMI)' },
+  { id: '786bd1e2-3614-4d11-8a6c-41f0b6e8356a', label: 'Microsoft Elevate' },
 ];
 
 const STATUS_STYLES: Record<string, { bg: string; text: string; icon: string }> = {
