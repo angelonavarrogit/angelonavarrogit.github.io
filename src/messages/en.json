@@ -122,6 +122,37 @@
     "infrastructure": "Infrastructure",
     "ai": "AI & ML"
   },
+  "learning": {
+    "label": "Growth",
+    "title": "Currently Learning",
+    "machineLearning": "Machine Learning",
+    "cloudArch": "Cloud Architecture",
+    "dataAnalytics": "Data Analytics",
+    "aiEngineering": "AI Engineering",
+    "advPython": "Advanced Python",
+    "enterpriseArch": "Enterprise Architecture"
+  },
+  "certRoadmap": {
+    "label": "Vision",
+    "title": "Certifications Roadmap",
+    "capm": { "name": "CAPM", "status": "Completed" },
+    "pmp": { "name": "PMP", "status": "Next" },
+    "aws": { "name": "AWS", "status": "Planned" },
+    "azure": { "name": "Azure", "status": "Planned" },
+    "gcloud": { "name": "Google Cloud", "status": "Future" }
+  },
+  "outsideWork": {
+    "label": "Personal",
+    "title": "Outside Work",
+    "church": "Church Leadership",
+    "youth": "Youth Community",
+    "learning": "Continuous Learning",
+    "tech": "Technology",
+    "sharing": "Knowledge Sharing"
+  },
+  "quote": {
+    "text": "Technology has value only when it solves real problems."
+  },
   "experience": {
     "label": "Career Path",
     "title": "Professional Experience",

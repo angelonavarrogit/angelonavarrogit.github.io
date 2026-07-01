@@ -9,6 +9,10 @@ import IndustriesSection from '@/components/sections/IndustriesSection';
 import HighlightsSection from '@/components/sections/HighlightsSection';
 import PhilosophySection from '@/components/sections/PhilosophySection';
 import FeaturedTechSection from '@/components/sections/FeaturedTechSection';
+import LearningSection from '@/components/sections/LearningSection';
+import CertRoadmapSection from '@/components/sections/CertRoadmapSection';
+import OutsideWorkSection from '@/components/sections/OutsideWorkSection';
+import QuoteSection from '@/components/sections/QuoteSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ExperienceSection from '@/components/sections/ExperienceSection';
 import SkillsSection from '@/components/sections/SkillsSection';
@@ -45,6 +49,8 @@ export default function Home() {
       <ExperienceSection />
       <PhilosophySection />
       <FeaturedTechSection />
+      <LearningSection />
+      <CertRoadmapSection />
       <SkillsSection />
       <CertificationsSection />
       <ProjectsSection />
@@ -52,6 +58,8 @@ export default function Home() {
       <TelecomSection />
       <GitHubSection data={GITHUB_FALLBACK} />
       <BlogSection articles={articles} />
+      <QuoteSection />
+      <OutsideWorkSection />
       <ContactSection />
 
       <footer className="border-t border-border py-8 text-center">
