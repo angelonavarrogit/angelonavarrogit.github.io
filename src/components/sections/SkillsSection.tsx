@@ -7,199 +7,126 @@ import { SKILL_CATEGORIES } from '@/data/skills';
 import type { Skill, SkillLevel } from '@/lib/types';
 
 /**
- * SkillsSection — Categorized skill dashboard with badges per proficiency level.
+ * SkillsSection — Premium categorized skill grid.
  *
- * Features:
- * - Skills organized in a grid of category cards
- * - Each skill displays name + level via styled badges (NOT progress bars)
- *   - Expert: solid accent bg, bold text
- *   - Advanced: outlined accent border
- *   - Intermediate: subtle/muted styling
- * - Stagger animation: 100ms between category cards, 300-600ms per card
- * - Triggers once on 20% viewport entry
- * - Respects prefers-reduced-motion
- * - Semantic structure with role="list" / role="listitem"
- * - Logical keyboard focus order; skills announced to assistive technologies
- * - Renders text in active locale via next-intl
+ * Design: Clean cards per category with visual level indicators.
+ * Categories: Backend, Cloud & DevOps, Telecommunications, Automation, AI, PM.
  *
- * @see Requirements 4.1, 4.2, 4.3, 4.4, 4.5
+ * @see Sprint 04: Skills + Certifications
  */
-
-/** Returns Tailwind classes for the skill level badge */
-function getSkillLevelStyles(level: SkillLevel): string {
-  switch (level) {
-    case 'expert':
-      return 'bg-accent text-background-DEFAULT font-bold';
-    case 'advanced':
-      return 'border border-accent text-accent bg-transparent font-medium';
-    case 'intermediate':
-      return 'bg-background-elevated text-foreground-muted border border-border font-normal';
-  }
-}
-
-/** Framer Motion variants for staggered category card entrance */
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.1, // 100ms between category cards
-    },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5, // 500ms (within 300-600ms range)
-      ease: 'easeOut',
-    },
-  },
-};
-
-/**
- * Strips the `skills.` prefix from a key so it works with useTranslations('skills').
- * e.g. 'skills.categories.backend' → 'categories.backend'
- *      'skills.python' → 'python'
- */
-function resolveKey(nameKey: string): string {
-  return nameKey.startsWith('skills.') ? nameKey.slice(7) : nameKey;
-}
-
-/** Individual skill badge component */
-function SkillBadge({
-  skill,
-  t,
-}: {
-  skill: Skill;
-  t: ReturnType<typeof useTranslations>;
-}) {
-  const levelStyles = getSkillLevelStyles(skill.level);
-  const skillName = t(resolveKey(skill.nameKey));
-  const levelLabel = t(`levels.${skill.level}`);
-
-  return (
-    <li
-      role="listitem"
-      className="inline-flex items-center gap-2"
-    >
-      <span
-        className={`inline-flex items-center rounded-full px-3 py-1 text-sm ${levelStyles}`}
-        aria-label={`${skillName} — ${levelLabel}`}
-      >
-        {skillName}
-        <span className="ml-1.5 text-xs opacity-80">
-          {levelLabel}
-        </span>
-      </span>
-    </li>
-  );
-}
-
 export default function SkillsSection() {
   const t = useTranslations('skills');
-  const sectionRef = useRef<HTMLElement>(null);
-  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+  const ref = useRef<HTMLElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.15 });
   const prefersReducedMotion = useReducedMotion();
-
   const shouldAnimate = !prefersReducedMotion;
+
+  const container = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } } };
+  const fadeUp = {
+    hidden: { opacity: 0, y: 24 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
+  };
+
+  const resolveKey = (key: string) => key.startsWith('skills.') ? key.slice(7) : key;
+
+  const renderGrid = () => (
+    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" role="list" aria-label={t('title')}>
+      {SKILL_CATEGORIES.map((category) => (
+        <article
+          key={category.id}
+          role="listitem"
+          className="group rounded-2xl border border-border/50 bg-background-card/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-accent/20 hover:shadow-lg hover:shadow-accent/5"
+          aria-labelledby={`skill-cat-${category.id}`}
+        >
+          <h3 id={`skill-cat-${category.id}`} className="mb-4 text-base font-semibold text-foreground">
+            {t(resolveKey(category.nameKey))}
+          </h3>
+          <div className="space-y-2.5">
+            {category.skills.map((skill) => (
+              <SkillRow key={skill.nameKey} skill={skill} t={t} resolveKey={resolveKey} />
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  );
 
   return (
     <section
       id="skills"
-      ref={sectionRef}
-      className="relative py-20 px-4 sm:px-6 lg:px-8"
+      ref={ref}
+      className="relative py-24 px-6 sm:px-8 lg:px-12"
       aria-labelledby="skills-heading"
     >
       <div className="mx-auto max-w-6xl">
-        {/* Section Title */}
-        <h2
-          id="skills-heading"
-          className="mb-12 text-center text-3xl font-bold text-foreground sm:text-4xl"
-        >
-          {t('title')}
-        </h2>
-
-        {/* Category Cards Grid */}
+        {/* Header */}
         {shouldAnimate ? (
           <motion.div
-            role="list"
-            aria-label={t('title')}
-            className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
-            variants={containerVariants}
-            initial="hidden"
-            animate={isInView ? 'visible' : 'hidden'}
+            className="mb-14 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
-            {SKILL_CATEGORIES.map((category) => (
-              <motion.article
-                key={category.id}
-                role="listitem"
-                variants={cardVariants}
-                className="rounded-xl border border-border bg-background-card p-6 transition-colors hover:border-border-hover"
-                aria-labelledby={`skill-category-${category.id}`}
-              >
-                <h3
-                  id={`skill-category-${category.id}`}
-                  className="mb-4 text-lg font-semibold text-foreground"
-                >
-                  {t(resolveKey(category.nameKey))}
-                </h3>
-                <ul
-                  role="list"
-                  aria-label={t(resolveKey(category.nameKey))}
-                  className="flex flex-wrap gap-2"
-                >
-                  {category.skills.map((skill) => (
-                    <SkillBadge
-                      key={skill.nameKey}
-                      skill={skill}
-                      t={t}
-                    />
-                  ))}
-                </ul>
-              </motion.article>
-            ))}
+            <p className="text-sm font-semibold uppercase tracking-widest text-accent">{t('label')}</p>
+            <h2 id="skills-heading" className="mt-2 text-3xl font-bold text-foreground sm:text-4xl">
+              {t('title')}
+            </h2>
           </motion.div>
         ) : (
-          /* Reduced-motion fallback: no animation, immediate render */
-          <div
-            role="list"
-            aria-label={t('title')}
-            className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
-          >
-            {SKILL_CATEGORIES.map((category) => (
-              <article
-                key={category.id}
-                role="listitem"
-                className="rounded-xl border border-border bg-background-card p-6"
-                aria-labelledby={`skill-category-${category.id}`}
-              >
-                <h3
-                  id={`skill-category-${category.id}`}
-                  className="mb-4 text-lg font-semibold text-foreground"
-                >
-                  {t(resolveKey(category.nameKey))}
-                </h3>
-                <ul
-                  role="list"
-                  aria-label={t(resolveKey(category.nameKey))}
-                  className="flex flex-wrap gap-2"
-                >
-                  {category.skills.map((skill) => (
-                    <SkillBadge
-                      key={skill.nameKey}
-                      skill={skill}
-                      t={t}
-                    />
-                  ))}
-                </ul>
-              </article>
-            ))}
+          <div className="mb-14 text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest text-accent">{t('label')}</p>
+            <h2 id="skills-heading" className="mt-2 text-3xl font-bold text-foreground sm:text-4xl">{t('title')}</h2>
           </div>
+        )}
+
+        {/* Grid */}
+        {shouldAnimate ? (
+          <motion.div variants={container} initial="hidden" animate={isInView ? 'visible' : 'hidden'}>
+            <motion.div variants={fadeUp}>
+              {renderGrid()}
+            </motion.div>
+          </motion.div>
+        ) : (
+          renderGrid()
         )}
       </div>
     </section>
+  );
+}
+
+function SkillRow({ skill, t, resolveKey }: { skill: Skill; t: ReturnType<typeof useTranslations>; resolveKey: (k: string) => string }) {
+  const name = t(resolveKey(skill.nameKey));
+  const levelLabel = t(`levels.${skill.level}`);
+
+  return (
+    <div className="flex items-center justify-between gap-3" aria-label={`${name} — ${levelLabel}`}>
+      <span className="text-sm text-foreground-muted">{name}</span>
+      <LevelIndicator level={skill.level} label={levelLabel} />
+    </div>
+  );
+}
+
+function LevelIndicator({ level, label }: { level: SkillLevel; label: string }) {
+  const dots = level === 'expert' ? 3 : level === 'advanced' ? 2 : 1;
+  const colors = {
+    expert: 'bg-accent',
+    advanced: 'bg-accent/60',
+    intermediate: 'bg-accent/30',
+  };
+
+  return (
+    <div className="flex items-center gap-2">
+      <div className="flex gap-1" aria-hidden="true">
+        {[1, 2, 3].map((i) => (
+          <div
+            key={i}
+            className={`h-1.5 w-4 rounded-full ${i <= dots ? colors[level] : 'bg-border'}`}
+          />
+        ))}
+      </div>
+      <span className="text-[11px] font-medium uppercase tracking-wider text-foreground-subtle w-20 text-right">
+        {label}
+      </span>
+    </div>
   );
 }
