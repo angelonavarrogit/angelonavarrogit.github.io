@@ -23,6 +23,7 @@ import TelecomSection from '@/components/sections/TelecomSection';
 import GitHubSection from '@/components/sections/GitHubSection';
 import BlogSection from '@/components/sections/BlogSection';
 import ContactSection from '@/components/sections/ContactSection';
+import Footer from '@/components/layout/Footer';
 
 /**
  * Home page — Enterprise Systems Engineer Portfolio.
@@ -62,11 +63,7 @@ export default function Home() {
       <OutsideWorkSection />
       <ContactSection />
 
-      <footer className="border-t border-border py-8 text-center">
-        <p className="text-sm text-foreground-muted">
-          © {new Date().getFullYear()} Angelo Navarro. All rights reserved.
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }

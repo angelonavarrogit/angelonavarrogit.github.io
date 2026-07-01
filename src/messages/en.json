@@ -153,6 +153,11 @@
   "quote": {
     "text": "Technology has value only when it solves real problems."
   },
+  "footer": {
+    "builtWith": "Built with",
+    "madeIn": "Made in Panama",
+    "rights": "All rights reserved."
+  },
   "experience": {
     "label": "Career Path",
     "title": "Professional Experience",
