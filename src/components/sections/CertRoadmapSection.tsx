@@ -17,10 +17,11 @@ const ROADMAP = [
   { id: 'gcloud', status: 'future', credlyId: null },
 ];
 
-/** Credly verified badges */
+/** Credly verified badges + PMI membership */
 const CREDLY_BADGES = [
-  { id: 'ef7f2452-54cf-4340-aa9b-f038e1fabc2f', label: 'CAPM (PMI)' },
-  { id: '786bd1e2-3614-4d11-8a6c-41f0b6e8356a', label: 'Microsoft Elevate' },
+  { id: 'ef7f2452-54cf-4340-aa9b-f038e1fabc2f', label: 'CAPM (PMI)', type: 'credly' as const },
+  { id: '786bd1e2-3614-4d11-8a6c-41f0b6e8356a', label: 'Microsoft Elevate', type: 'credly' as const },
+  { id: '/credentials/pmi-member-certificate.pdf', label: 'PMI Member', type: 'pdf' as const },
 ];
 
 const STATUS_STYLES: Record<string, { bg: string; text: string; icon: string }> = {
@@ -78,11 +79,11 @@ export default function CertRoadmapSection() {
           {CREDLY_BADGES.map((badge) => (
             <a
               key={badge.id}
-              href={`https://www.credly.com/badges/${badge.id}/public_url`}
+              href={badge.type === 'credly' ? `https://www.credly.com/badges/${badge.id}/public_url` : badge.id}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-2.5 rounded-lg border border-border/50 bg-background-card/50 px-4 py-3 transition-all duration-200 hover:border-accent/30 hover:shadow-md hover:shadow-accent/5"
-              aria-label={`Verify ${badge.label} on Credly`}
+              aria-label={`Verify ${badge.label} ${badge.type === 'credly' ? 'on Credly' : '(PDF)'}`}
             >
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent/10">
                 <svg className="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
@@ -91,7 +92,7 @@ export default function CertRoadmapSection() {
               </div>
               <div className="flex flex-col">
                 <span className="text-sm font-semibold text-foreground group-hover:text-accent transition-colors">{badge.label}</span>
-                <span className="text-[10px] text-foreground-subtle">Credly Verified</span>
+                <span className="text-[10px] text-foreground-subtle">{badge.type === 'credly' ? 'Credly Verified' : 'View Certificate'}</span>
               </div>
               <svg className="ml-2 h-3.5 w-3.5 text-foreground-subtle group-hover:text-accent transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
