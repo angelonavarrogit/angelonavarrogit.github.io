@@ -36,11 +36,18 @@
     }
   },
   "about": {
-    "title": "About Me",
-    "bio": "Systems Engineer with 6+ years of experience in the telecommunications sector, specialized in process automation, backend development, and project management. Currently at +Móvil (Liberty Latin America), Panama, leading digital transformation initiatives and operational optimization.",
+    "label": "About Me",
+    "title": "Transforming Telecom with Code",
+    "bio1": "I'm a Systems Engineer passionate about solving complex real-world problems. Over the past 6+ years at +Móvil (Liberty Latin America), I've led the automation of critical telecom processes — from CSG mediation to CDR processing — reducing operational times by over 80%.",
+    "bio2": "My approach combines robust backend engineering with structured project management. I design systems that process millions of records daily, build APIs that bridge legacy platforms with modern solutions, and lead technical teams toward predictable deliveries.",
+    "location": "Panama",
+    "company": "+Móvil / Liberty Latin America",
+    "degree": "Systems Engineering",
+    "languages": "Spanish & English",
     "photoAlt": "Professional photo of Angelo Navarro, Systems Engineer and Telecom Specialist"
   },
   "experience": {
+    "label": "Career Path",
     "title": "Professional Experience",
     "present": "Present",
     "cableWireless": {

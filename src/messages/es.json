@@ -36,11 +36,18 @@
     }
   },
   "about": {
-    "title": "Sobre Mí",
-    "bio": "Ingeniero en Sistemas con más de 6 años de experiencia en el sector de telecomunicaciones, especializado en automatización de procesos, desarrollo backend y gestión de proyectos. Actualmente en +Móvil (Liberty Latin America), Panamá, liderando iniciativas de transformación digital y optimización operativa.",
+    "label": "Conóceme",
+    "title": "Transformando Telecomunicaciones con Código",
+    "bio1": "Soy un Ingeniero en Sistemas apasionado por resolver problemas complejos del mundo real. En los últimos 6+ años en +Móvil (Liberty Latin America), he liderado la automatización de procesos críticos de telecomunicaciones — desde mediación CSG hasta procesamiento de CDRs — reduciendo tiempos operativos en más de un 80%.",
+    "bio2": "Mi enfoque combina ingeniería backend robusta con gestión de proyectos estructurada. Diseño sistemas que procesan millones de registros diarios, construyo APIs que conectan plataformas legacy con soluciones modernas, y lidero equipos técnicos hacia entregas predecibles.",
+    "location": "Panamá",
+    "company": "+Móvil / Liberty Latin America",
+    "degree": "Ingeniería en Sistemas",
+    "languages": "Español & English",
     "photoAlt": "Fotografía profesional de Angelo Navarro, Ingeniero en Sistemas y Especialista en Telecomunicaciones"
   },
   "experience": {
+    "label": "Trayectoria",
     "title": "Experiencia Profesional",
     "present": "Presente",
     "cableWireless": {
