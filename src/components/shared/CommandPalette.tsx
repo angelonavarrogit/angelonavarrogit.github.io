@@ -14,14 +14,10 @@ import { useLocaleStore } from '@/hooks/useLocale';
 
 const SECTION_LINKS: SectionLink[] = [
   { id: 'hero', labelKey: 'nav.home', href: '#hero' },
+  { id: 'what-i-do', labelKey: 'nav.whatIDo', href: '#what-i-do' },
   { id: 'about', labelKey: 'nav.about', href: '#about' },
   { id: 'experience', labelKey: 'nav.experience', href: '#experience' },
-  { id: 'skills', labelKey: 'nav.skills', href: '#skills' },
-  { id: 'certifications', labelKey: 'nav.certifications', href: '#certifications' },
   { id: 'projects', labelKey: 'nav.projects', href: '#projects' },
-  { id: 'stats', labelKey: 'nav.stats', href: '#stats' },
-  { id: 'telecom', labelKey: 'nav.telecom', href: '#telecom' },
-  { id: 'github', labelKey: 'nav.github', href: '#github' },
   { id: 'blog', labelKey: 'nav.blog', href: '#blog' },
   { id: 'contact', labelKey: 'nav.contact', href: '#contact' },
 ];
