@@ -47,85 +47,85 @@
     "location": "Panamá",
     "company": "+Móvil / Liberty Latin America",
     "degree": "Ingeniería en Sistemas",
-    "languages": "Español & English",
+    "languages": "Español e Inglés",
     "photoAlt": "Fotografía profesional de Angelo Navarro, Ingeniero en Sistemas y Especialista en Telecomunicaciones"
   },
   "whatIDo": {
     "label": "Capacidades",
-    "title": "What I Do",
+    "title": "Lo Que Hago",
     "enterprise": {
-      "title": "Enterprise Software",
+      "title": "Software Empresarial",
       "description": "Diseño soluciones backend escalables para plataformas empresariales críticas que procesan millones de transacciones."
     },
     "telecom": {
-      "title": "Telecommunications",
+      "title": "Telecomunicaciones",
       "description": "Especializado en sistemas de mediación, CDR processing, validación de datos e integración de plataformas telco."
     },
     "automation": {
-      "title": "Automation",
+      "title": "Automatización",
       "description": "Automatizo procesos operativos críticos reduciendo tiempos de ejecución manual en más de 80%."
     },
     "ai": {
-      "title": "Artificial Intelligence",
+      "title": "Inteligencia Artificial",
       "description": "Integro soluciones de IA para mejorar productividad, análisis de información y toma de decisiones."
     }
   },
   "industries": {
     "label": "Sectores",
-    "title": "Industries",
-    "telecom": "Telecommunications",
-    "finance": "Financial Services",
-    "enterprise": "Enterprise Platforms",
-    "ai": "Artificial Intelligence",
-    "data": "Data Engineering",
-    "automation": "Automation",
-    "pm": "Project Management"
+    "title": "Industrias",
+    "telecom": "Telecomunicaciones",
+    "finance": "Servicios Financieros",
+    "enterprise": "Plataformas Empresariales",
+    "ai": "Inteligencia Artificial",
+    "data": "Ingeniería de Datos",
+    "automation": "Automatización",
+    "pm": "Gestión de Proyectos"
   },
   "highlights": {
     "label": "Impacto",
-    "title": "Professional Highlights",
-    "years": "Years in Telecommunications",
-    "enterprise": "Enterprise Systems",
-    "cdr": "CDR Records Processed",
-    "capm": "CAPM Certified (PMI)",
-    "platforms": "Critical Production Platforms",
-    "mediation": "Data Mediation Specialist"
+    "title": "Logros Profesionales",
+    "years": "Años en Telecomunicaciones",
+    "enterprise": "Sistemas Empresariales",
+    "cdr": "Registros CDR Procesados",
+    "capm": "Certificado CAPM (PMI)",
+    "platforms": "Plataformas Críticas de Producción",
+    "mediation": "Especialista en Mediación de Datos"
   },
   "philosophy": {
     "label": "Valores",
-    "title": "My Engineering Philosophy",
+    "title": "Mi Filosofía de Ingeniería",
     "automation": {
-      "title": "Automation First",
+      "title": "Automatización Primero",
       "description": "Si una tarea repetitiva existe, debe ser automatizada. Sin excepciones."
     },
     "security": {
-      "title": "Security by Design",
+      "title": "Seguridad por Diseño",
       "description": "La seguridad no es un afterthought. Es parte del diseño desde el día uno."
     },
     "documentation": {
-      "title": "Documentation Matters",
+      "title": "La Documentación Importa",
       "description": "El buen software merece buena documentación. El código se lee más de lo que se escribe."
     },
     "learning": {
-      "title": "Continuous Learning",
+      "title": "Aprendizaje Continuo",
       "description": "La tecnología cambia. El aprendizaje nunca se detiene."
     },
     "scalable": {
-      "title": "Scalable Thinking",
+      "title": "Pensamiento Escalable",
       "description": "Siempre construir pensando en el mañana. Las soluciones de hoy deben crecer."
     }
   },
   "featuredTech": {
     "label": "Tecnologías",
-    "title": "Featured Technologies",
-    "enterprise": "Enterprise",
-    "programming": "Programming",
-    "infrastructure": "Infrastructure",
-    "ai": "AI & ML"
+    "title": "Tecnologías Destacadas",
+    "enterprise": "Empresarial",
+    "programming": "Programación",
+    "infrastructure": "Infraestructura",
+    "ai": "IA & ML"
   },
   "learning": {
     "label": "Crecimiento",
-    "title": "Currently Learning",
+    "title": "Aprendiendo Actualmente",
     "machineLearning": "Machine Learning",
     "cloudArch": "Cloud Architecture",
     "dataAnalytics": "Data Analytics",
@@ -135,7 +135,7 @@
   },
   "certRoadmap": {
     "label": "Visión",
-    "title": "Certifications Roadmap",
+    "title": "Ruta de Certificaciones",
     "capm": { "name": "CAPM", "status": "Completado" },
     "pmp": { "name": "PMP", "status": "Siguiente" },
     "aws": { "name": "AWS", "status": "Planeado" },
@@ -144,7 +144,7 @@
   },
   "outsideWork": {
     "label": "Personal",
-    "title": "Outside Work",
+    "title": "Fuera del Trabajo",
     "church": "Liderazgo Eclesial",
     "youth": "Comunidad Juvenil",
     "learning": "Aprendizaje Continuo",
@@ -152,7 +152,7 @@
     "sharing": "Compartir Conocimiento"
   },
   "quote": {
-    "text": "Technology has value only when it solves real problems."
+    "text": "La tecnología solo tiene valor cuando resuelve problemas reales."
   },
   "footer": {
     "builtWith": "Construido con",
