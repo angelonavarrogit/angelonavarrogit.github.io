@@ -19,8 +19,11 @@
   "hero": {
     "greeting": "Hi, I'm",
     "hireCta": "Hire Me",
+    "contactCta": "Let's Work Together",
     "downloadCv": "Download CV",
-    "available": "Available for new projects",
+    "available": "Available for new opportunities",
+    "tagline": "Building reliable software solutions that simplify complex enterprise operations.",
+    "trustedBy": "Experience at",
     "subtitle": "Systems Engineer with 6+ years transforming telecom operations through automation, robust APIs, and project management at +Móvil, Panama.",
     "metrics": {
       "years": "Years of experience",
@@ -45,6 +48,37 @@
     "degree": "Systems Engineering",
     "languages": "Spanish & English",
     "photoAlt": "Professional photo of Angelo Navarro, Systems Engineer and Telecom Specialist"
+  },
+  "whatIDo": {
+    "label": "Capabilities",
+    "title": "What I Do",
+    "enterprise": {
+      "title": "Enterprise Software",
+      "description": "I design scalable backend solutions for critical enterprise platforms processing millions of transactions."
+    },
+    "telecom": {
+      "title": "Telecommunications",
+      "description": "Specialized in mediation systems, CDR processing, data validation, and telco platform integration."
+    },
+    "automation": {
+      "title": "Automation",
+      "description": "I automate critical operational processes reducing manual execution times by over 80%."
+    },
+    "ai": {
+      "title": "Artificial Intelligence",
+      "description": "I integrate AI solutions to improve productivity, information analysis, and decision-making."
+    }
+  },
+  "industries": {
+    "label": "Sectors",
+    "title": "Industries",
+    "telecom": "Telecommunications",
+    "finance": "Financial Services",
+    "enterprise": "Enterprise Platforms",
+    "ai": "Artificial Intelligence",
+    "data": "Data Engineering",
+    "automation": "Automation",
+    "pm": "Project Management"
   },
   "experience": {
     "label": "Career Path",

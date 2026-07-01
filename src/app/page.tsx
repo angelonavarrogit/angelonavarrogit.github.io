@@ -4,6 +4,8 @@ import { GITHUB_FALLBACK } from '@/data/github-fallback';
 import { getAllArticles } from '@/lib/blog';
 
 import HeroSection from '@/components/sections/HeroSection';
+import WhatIDoSection from '@/components/sections/WhatIDoSection';
+import IndustriesSection from '@/components/sections/IndustriesSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ExperienceSection from '@/components/sections/ExperienceSection';
 import SkillsSection from '@/components/sections/SkillsSection';
@@ -16,13 +18,11 @@ import BlogSection from '@/components/sections/BlogSection';
 import ContactSection from '@/components/sections/ContactSection';
 
 /**
- * Home page — Static export compatible.
+ * Home page — Enterprise Systems Engineer Portfolio.
  *
- * Section order: Hero → About → Experience → Skills → Certifications →
- * Projects → Stats → Telecom → GitHub → Blog → Contact → Footer
- *
- * GitHub data uses static fallback (no server-side fetching for GitHub Pages).
- * Blog articles are read from MDX files at build time.
+ * Section order (repositioned for professional impact):
+ * Hero → What I Do → Industries → About → Experience → Skills →
+ * Certifications → Projects → Stats → Telecom → GitHub → Blog → Contact
  */
 export default function Home() {
   const personJsonLd = buildPersonJsonLd();
@@ -31,11 +31,12 @@ export default function Home() {
 
   return (
     <div className="overflow-x-hidden">
-      {/* JSON-LD Structured Data */}
       <JsonLd data={personJsonLd} />
       <JsonLd data={webSiteJsonLd} />
 
       <HeroSection />
+      <WhatIDoSection />
+      <IndustriesSection />
       <AboutSection />
       <ExperienceSection />
       <SkillsSection />

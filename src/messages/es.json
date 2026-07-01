@@ -19,8 +19,11 @@
   "hero": {
     "greeting": "Hola, soy",
     "hireCta": "Contrátame",
+    "contactCta": "Trabajemos Juntos",
     "downloadCv": "Descargar CV",
-    "available": "Disponible para nuevos proyectos",
+    "available": "Disponible para nuevas oportunidades",
+    "tagline": "Construyendo soluciones de software confiables que simplifican operaciones empresariales complejas.",
+    "trustedBy": "Experiencia en",
     "subtitle": "Ingeniero en Sistemas con +6 años transformando operaciones de telecomunicaciones mediante automatización, APIs robustas y gestión de proyectos en +Móvil, Panamá.",
     "metrics": {
       "years": "Años de experiencia",
@@ -45,6 +48,37 @@
     "degree": "Ingeniería en Sistemas",
     "languages": "Español & English",
     "photoAlt": "Fotografía profesional de Angelo Navarro, Ingeniero en Sistemas y Especialista en Telecomunicaciones"
+  },
+  "whatIDo": {
+    "label": "Capacidades",
+    "title": "What I Do",
+    "enterprise": {
+      "title": "Enterprise Software",
+      "description": "Diseño soluciones backend escalables para plataformas empresariales críticas que procesan millones de transacciones."
+    },
+    "telecom": {
+      "title": "Telecommunications",
+      "description": "Especializado en sistemas de mediación, CDR processing, validación de datos e integración de plataformas telco."
+    },
+    "automation": {
+      "title": "Automation",
+      "description": "Automatizo procesos operativos críticos reduciendo tiempos de ejecución manual en más de 80%."
+    },
+    "ai": {
+      "title": "Artificial Intelligence",
+      "description": "Integro soluciones de IA para mejorar productividad, análisis de información y toma de decisiones."
+    }
+  },
+  "industries": {
+    "label": "Sectores",
+    "title": "Industries",
+    "telecom": "Telecommunications",
+    "finance": "Financial Services",
+    "enterprise": "Enterprise Platforms",
+    "ai": "Artificial Intelligence",
+    "data": "Data Engineering",
+    "automation": "Automation",
+    "pm": "Project Management"
   },
   "experience": {
     "label": "Trayectoria",
